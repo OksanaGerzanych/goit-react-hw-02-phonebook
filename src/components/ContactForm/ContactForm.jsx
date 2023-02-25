@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Formik, Field } from 'formik';
 import { nanoid } from 'nanoid';
 import {
@@ -48,3 +49,7 @@ export const ContactForm = ({ onSubmit }) => (
     </Formik>
   </div>
 );
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func,
+};

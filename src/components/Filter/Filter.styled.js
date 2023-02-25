@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FilterContainer = styled.div`
-  margin: 30px;
+  margin: 30px 0px;
   display: flex;
 `;
 export const Text = styled.label`
@@ -11,5 +11,5 @@ export const Text = styled.label`
   letter-spacing: 0.02em;
   display: flex;
   flex-direction: column;
-  margin-left: 15px;
+  gap: 2px;
 `;

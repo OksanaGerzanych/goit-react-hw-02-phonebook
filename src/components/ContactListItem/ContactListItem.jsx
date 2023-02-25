@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Item } from './ContactListItem.styled';
-//import { nanoid } from 'nanoid';
+import { ButtonDelete } from './ContactListItem.styled';
 
 export const ContactListItem = ({ id, name, number, onDeleteContact }) => {
   return (
-    <Item >
+    <Item>
       {name}: {number}
-      <button type="button" onClick={() => onDeleteContact(id)}>
+      <ButtonDelete type="button" id={id} onClick={() => onDeleteContact(id)}>
         Delete
-      </button>
+      </ButtonDelete>
     </Item>
   );
 };
 
 ContactListItem.propTypes = {
+  id: PropTypes.string,
   name: PropTypes.string,
   number: PropTypes.string,
   onDeleteContact: PropTypes.func,
